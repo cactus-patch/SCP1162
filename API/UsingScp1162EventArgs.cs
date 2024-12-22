@@ -1,20 +1,10 @@
-﻿using System;
+﻿namespace SCP1162.API;
+
 using Exiled.API.Features;
 using Exiled.Events.EventArgs.Interfaces;
 
-namespace SCP1162.API
-{
-    public class UsingScp1162EventArgs : IExiledEvent
-    {
-        public UsingScp1162EventArgs(Player player, ItemType itemafter, ItemType itembefore)
-        {
-            Player = player;
-            ItemAfter = itemafter;
-            ItemBefore = itembefore;
-        }
-        
-        public Player Player { get; }
-        public ItemType ItemAfter { get; set; }
-        public ItemType ItemBefore { get; }
-    }
+public class UsingScp1162EventArgs(Player player, ItemType itemAfter, ItemType itemBefore) : IExiledEvent {
+  public Player Player => player;
+  public ItemType ItemAfter { get; set; } = itemAfter;
+  public ItemType ItemBefore => itemBefore;
 }

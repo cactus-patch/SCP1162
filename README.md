@@ -1,4 +1,3 @@
-[![Github All Releases](https://img.shields.io/github/downloads/xRoier/SCP-1162-EXILED/total?color=blueviolet&style=for-the-badge)]()
 # SCP-1162-EXILED
 
 Turn 173 spawn into SCP-1162.
@@ -50,7 +49,7 @@ scp1162:
 
 # Installation
 
-**[EXILED 6.0.0](https://github.com/galaxy119/EXILED) must be installed for this to work.**
+**your mother(exmod.exiled 9.0.0-beta-1)  must be installed for this to work.**
 
 Place the "SCP1162.dll" file in your Plugins folder.
 Windows: ``%appdata%/EXILED/Plugins``.
