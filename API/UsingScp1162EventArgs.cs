@@ -5,6 +5,6 @@ using Exiled.Events.EventArgs.Interfaces;
 
 public class UsingScp1162EventArgs(Player player, ItemType itemAfter, ItemType itemBefore) : IExiledEvent {
   public Player Player => player;
-  public ItemType ItemAfter { get; set; } = itemAfter;
+  public ItemType ItemAfter => itemAfter;
   public ItemType ItemBefore => itemBefore;
 }
