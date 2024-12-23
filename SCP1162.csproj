@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EXILED" Version="9.0.0-beta.5" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="API\"/>
   </ItemGroup>
 
@@ -20,5 +16,9 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>refs\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExMod.Exiled" Version="9.0.1" />
   </ItemGroup>
 </Project>
