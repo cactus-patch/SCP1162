@@ -27,3 +27,8 @@ at
 windows: `%appdata%\EXILED\Plugins`
 
 linux: `$HOME/.config/EXILED/Plugins`
+
+## credits
+
+original author: [xRoier](https://github.com/xRoier), and you can find their
+ko-fi [here](https://ko-fi.com/xroier).
