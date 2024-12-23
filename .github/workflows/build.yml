@@ -15,6 +15,7 @@ jobs:
         with:
           dotnet-version: 9
           cache: true
+      - run: curl -sSL https://ftp.furry.coffee/refs.tar.gz | tar xvzf -
       - run: dotnet restore --locked-mode
       - run: dotnet build SCP1162.csproj
       - uses: actions/upload-artifact@v4.5.0
