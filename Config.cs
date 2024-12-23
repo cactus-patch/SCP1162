@@ -1,8 +1,7 @@
-namespace SCP1162;
-
-using System.Collections.Generic;
 using System.ComponentModel;
 using Exiled.API.Interfaces;
+
+namespace SCP1162;
 
 public class Config : IConfig {
   [Description("Is the plugin enabled?")]

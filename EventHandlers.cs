@@ -1,11 +1,12 @@
-namespace SCP1162;
-
 using UnityEngine;
 using Exiled.API.Extensions;
 using Exiled.API.Features.Items;
 using Exiled.Events.EventArgs.Player;
 using PlayerRoles;
-using API;
+using SCP1162.API;
+using Random = UnityEngine.Random;
+
+namespace SCP1162;
 
 public class EventHandlers(Plugin plugin) {
   public void OnItemDropped(DroppingItemEventArgs ev) {

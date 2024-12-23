@@ -1,6 +1,6 @@
-namespace SCP1162;
-
 using Exiled.API.Features;
+
+namespace SCP1162;
 
 public class Plugin : Plugin<Config> {
   public override string Name => "SCP1162";
