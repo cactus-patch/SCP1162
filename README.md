@@ -1,14 +1,29 @@
-# SCP-1162-EXILED
+# SCP1162
 
-Turn 173 spawn into SCP-1162.
-If you drop an item inside the "cage"/room of Scp-173 you will get another one.
+this plugin turns SCP-173's spawn into SCP-1162. if you drop an item inside the
+room you will get another item listed in the config in exchange, chosen by
+random.
 
-# Installation
+## download
 
-**Exiled (REBOOT) version 9.0.0-beta-5 must be installed for this to work.**
+two version are published in the
+[latest release](https://github.com/cactus-patch/SCP-1162-EXILED/releases); one
+that ends in `-exmod.dll` and one that is not. the one that does is built with
+`ExMod.Exiled`, and the other one is built with `Exiled` (reboot). if you are
+not sure which one you need, check if `reboot` is set to `true` in your exiled
+setting, which can be found at
 
-Place the "SCP1162.dll" file in your Plugins folder.
+windows:
+`%appdata%\SCP Secret Laboratory\PluginAPI\plugins\<your server port>\Exiled Loader\config.yml`
 
-Windows: `%appdata%/EXILED/Plugins`.
+linux:
+`$HOME/.config/SCP Secret Laboratory/PluginAPI/plugins/<your server port>/Exiled Loader/config.yml`
 
-Linux: `$HOME/.config/EXILED/Plugins`.
+## install
+
+to install, place the downloaded file in your plugins folder, which can be found
+at
+
+windows: `%appdata%\EXILED\Plugins`
+
+linux: `$HOME/.config/EXILED/Plugins`
