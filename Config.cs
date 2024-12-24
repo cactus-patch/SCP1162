@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using Exiled.API.Enums;
 using Exiled.API.Interfaces;
 
 namespace SCP1162;
@@ -18,6 +19,9 @@ public class Config : IConfig {
     "<i>You try to drop the item through <color=yellow>SCP-1162</color> to get another...</i>";
 
   public ushort ItemDropMessageDuration { get; set; } = 5;
+
+  [Description("Room used for SCP-1162.")]
+  public RoomType RoomType { get; set; } = RoomType.Lcz173;
 
   [Description("The list of item chances.")]
   public List<ItemType> Chances { get; set; } = [

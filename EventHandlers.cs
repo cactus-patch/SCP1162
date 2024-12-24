@@ -1,11 +1,8 @@
-using UnityEngine;
-using Exiled.API.Extensions;
+using Exiled.API.Features;
 using Exiled.Events.EventArgs.Player;
 using PlayerEvents = Exiled.Events.Handlers.Player;
-using PlayerRoles;
 using SCP1162.API;
 using Item = Exiled.API.Features.Items.Item;
-using Random = UnityEngine.Random;
 
 namespace SCP1162;
 
@@ -23,16 +20,15 @@ public class EventHandler {
 
   private void OnDroppingItem(DroppingItemEventArgs ev) {
     if (!ev.IsAllowed) return;
-    if (!(Vector3.Distance(ev.Player.Position, RoleTypeId.Scp173.GetRandomSpawnLocation().Position) <= 8.2f)) return;
+    if (ev.Player.CurrentRoom != Room.Get(_plugin.Config.RoomType)) return;
     if (_plugin.Config.UseHints)
      ev.Player.ShowHint(_plugin.Config.ItemDropMessage, _plugin.Config.ItemDropMessageDuration);
     else
       ev.Player.Broadcast(_plugin.Config.ItemDropMessageDuration, _plugin.Config.ItemDropMessage, Broadcast.BroadcastFlags.Normal, true);
     ev.IsAllowed = false;
-    var oldItem = ev.Item.Base.ItemTypeId;
     ev.Player.RemoveItem(ev.Item);
-    var newItemType = _plugin.Config.Chances[Random.Range(0, _plugin.Config.Chances.Count)];
-    var eventArgs = new UsingScp1162EventArgs(ev.Player, newItemType, oldItem);
+    var newItemType = _plugin.Config.Chances[UnityEngine.Random.Range(0, _plugin.Config.Chances.Count)];
+    var eventArgs = new UsingScp1162EventArgs(ev.Player, newItemType, ev.Item.Base.ItemTypeId);
     Scp1162Event.OnUsingScp1162(eventArgs);
     var newItem = Item.Create(eventArgs.ItemAfter);
     ev.Player.AddItem(newItem);
